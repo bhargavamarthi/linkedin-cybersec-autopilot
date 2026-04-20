@@ -1,8 +1,6 @@
 name: LinkedIn Cybersec Autopilot
 
 on:
-  push:
-    branches: [master]
   schedule:
     - cron: '0 9 * * 1,3,5'   # Mon / Wed / Fri at 9am UTC
   workflow_dispatch:            # Run manually anytime from GitHub UI
