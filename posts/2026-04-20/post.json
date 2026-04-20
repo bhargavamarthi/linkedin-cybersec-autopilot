@@ -1,0 +1,14 @@
+{
+  "topic": "Critical zero-day in widely-used supply chain software affecting Fortune 500 companies",
+  "post_text": "Your vendor's patch management system just became your biggest vulnerability.\n\nThis week, a critical zero-day was discovered in a supply chain management platform used by thousands of enterprises. What made it worse? The vulnerability sat unpatched for 8+ months while attackers exploited it to move laterally into customer networks.\n\nHere's what happened: Attackers leveraged improper API authentication to escalate privileges and access sensitive vendor data. But the real damage? They used it as a pivot point to compromise downstream customers\u2014bypassing traditional perimeter defenses entirely.\n\nThree things defenders need to do NOW:\n\n1. Stop trusting vendor dashboards for security validation. Assume your third-party integrations are compromised until proven otherwise. Implement micro-segmentation between vendor systems and your crown jewels.\n\n2. Zero trust isn't optional anymore\u2014it's table stakes. If your vendor integrations use ANY form of shared credentials or pre-baked authentication tokens, you're exposed.\n\n3. Map your supply chain attack surface today. You probably don't know every system that connects to your environment. That's the attack vector everyone's using in 2026.\n\nThe vendors who survive the next 24 months aren't the ones with the fanciest products. They're the ones who treat security as a feature, not an afterthought.\n\nWhat's your take? Comment below.",
+  "hashtags": [
+    "#Cybersecurity",
+    "#ZeroTrust",
+    "#SupplyChainSecurity",
+    "#VulnerabilityManagement",
+    "#ThreatIntelligence"
+  ],
+  "image_prompt": "Professional infographic showing interconnected nodes representing vendors and enterprises, with a red breach pathway flowing through the network. One central node highlighted in red with warning symbol. Clean dark blue and gray color scheme, 16:9 aspect ratio, depicting supply chain compromise concept. No text overlays.",
+  "post_type": "threat_of_week",
+  "date": "2026-04-20"
+}

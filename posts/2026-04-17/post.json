@@ -1,0 +1,14 @@
+{
+  "topic": "The CISSP trap: Why I stopped chasing certifications and started building real skills instead",
+  "post_text": "I spent 6 months cramming for the CISSP. Memorized every domain. Passed on the first try. Then I sat in interviews and got asked basic questions about actual incident response that I couldn't answer.\n\nThat's when it hit me: certifications open doors. Real skills get you the job.\n\nHere's what changed my approach:\n\n1. I still got certified (CISSP matters for senior roles), but I treated it differently. Instead of memorization drills, I applied each domain to real scenarios.\n\n2. I set up a home lab. Actually ran Splunk. Actually configured firewalls. Actually analyzed malware samples. When interviewers asked about SIEM tuning, I had hands-on war stories.\n\n3. I stopped studying alone. Joined a Discord community of people breaking into security. We shared challenges, solved each other's lab problems, and held each other accountable.\n\n4. I documented everything. Blog posts, GitHub repos, write-ups of labs I completed. Recruiters started finding me instead of the other way around.\n\nThe certification got my resume past the filter. The lab work got me the offer.\n\nIf you're grinding for a cert right now, don't stop. But ask yourself: Am I studying this to pass a test, or am I learning this to do the job?\n\nWhat's the biggest gap you're seeing between what you're studying and what employers actually want?",
+  "hashtags": [
+    "#CyberSecurity",
+    "#CareerTip",
+    "#Certification",
+    "#SecurityJobs",
+    "#IncidentResponse"
+  ],
+  "image_prompt": "Modern infographic split into two halves: left side shows a person studying at desk with certification books and test scores (monochrome, faded); right side shows the same person confident in a technical environment with monitors, lab equipment, and green network visualizations (vibrant, detailed). A bridge or arrow connects the two. Style: clean, professional, tech-forward, 16:9 aspect ratio, no text overlays.",
+  "post_type": "career_tip",
+  "date": "2026-04-17"
+}
