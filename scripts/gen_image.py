@@ -26,7 +26,11 @@ FALLBACK_PROMPT = (
 
 
 def generate_image():
-    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        print("[gen_image] No GEMINI_API_KEY set, skipping image generation")
+        return
+    client = genai.Client(api_key=api_key)
 
     if Path(POST_PATH).exists():
         with open(POST_PATH) as f:
