@@ -1,0 +1,14 @@
+{
+  "topic": "Critical zero-day in widely-deployed enterprise backup software enables full system compromise with no patches available",
+  "post_text": "Your backup solution was supposed to be your safety net. Instead, it just became your attacker's front door.\n\nThis week, a critical zero-day vulnerability was disclosed in enterprise backup software used by Fortune 500 companies. The flaw allows unauthenticated remote attackers to execute arbitrary code with SYSTEM privileges. No patch. No workaround. Just exposure.\n\nWhy this matters: Backup systems are the crown jewels of any infrastructure. They're intentionally connected to everything. If an attacker compromises your backup, they don't just steal data\u2014they own your entire recovery capability. You're essentially locked out of your own business continuity.\n\nHere's what defenders need to do RIGHT NOW:\n\n1. Network segmentation is non-negotiable. Your backup infrastructure should be behind multiple layers of access controls. If an attacker can't reach it from the internet or from compromised user machines, they can't exploit it.\n\n2. Zero-trust authentication. Even if someone gains credentials, additional verification factors should be mandatory. This isn't optional anymore.\n\n3. Monitor backup system logs like your survival depends on it. Unusual authentication patterns, bulk exports, or configuration changes are your early warning system.\n\nThe uncomfortable truth? Most organizations discovered this vulnerability through breach notifications, not proactive scanning. If your backup system isn't on your critical asset inventory with dedicated monitoring, you're flying blind.\n\nWhat's your take? Comment below.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#ZeroDayVulnerability",
+    "#BackupSecurity",
+    "#CriticalInfrastructure",
+    "#ThreatResponse"
+  ],
+  "image_prompt": "Professional infographic showing a shield with a backup storage icon, partially cracked with red alert symbols. Background shows layered network security rings (blue and gray). Central imagery: a server or data center protected by multiple overlapping shield layers. Color scheme: dark blue, red accents, white text elements. Style: modern, clean, enterprise-focused. 16:9 aspect ratio. No text overlay.",
+  "post_type": "threat_of_week",
+  "date": "2026-04-27"
+}
