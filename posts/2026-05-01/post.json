@@ -1,0 +1,14 @@
+{
+  "topic": "The certification trap: why Security+ alone won't land you the job",
+  "post_text": "I spent 6 months grinding for Security+ thinking it was the golden ticket to a junior analyst role.\n\nPassed it. Still got rejected from 40+ jobs.\n\nThen a mentor told me something that changed everything: \"Certifications open doors. Projects open minds.\"\n\nI pivoted. Started building actual security work\u2014not just studying for exams. Set up a home lab, documented a malware analysis, created a practical writeup on a real CVE. Published it on GitHub. Showed it in interviews.\n\nFirst interview with the portfolio included? Three offers in two weeks.\n\nHere's what I learned:\n\n\u2713 Employers see hundreds of Security+ holders\n\u2713 They see maybe five who can DEMONSTRATE what they know\n\u2713 Certifications prove you studied material\n\u2713 Projects prove you can actually do the work\n\nIf you're studying for a cert right now\u2014great. Do it. But don't stop there. Build something. Break something safely. Document it. Show it off.\n\nYour first security job isn't won on a test score. It's won by showing you're dangerous enough to be useful, and safe enough to trust.\n\nWhat's holding you back from building your first security project? Is it technical gaps, time, or just not knowing where to start?",
+  "hashtags": [
+    "#CyberSecurity",
+    "#CareerDevelopment",
+    "#CertificationTip",
+    "#InfoSec",
+    "#JuniorAnalyst"
+  ],
+  "image_prompt": "Split-screen infographic: left side shows a person studying with textbooks and exam papers (muted colors, slightly faded), right side shows the same person confidently presenting a laptop with code/analysis visible (bright, vibrant colors, spotlight effect). Center dividing line has an arrow pointing right. Minimalist tech aesthetic, subtle circuit board pattern background. No text overlays. Professional photography style, 16:9 ratio.",
+  "post_type": "career_tip",
+  "date": "2026-05-01"
+}
