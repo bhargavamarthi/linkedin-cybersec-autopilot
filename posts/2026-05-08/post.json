@@ -1,0 +1,14 @@
+{
+  "topic": "The certification trap: Why passing the exam isn't enough to land your first cybersecurity role",
+  "post_text": "I spent 6 months grinding for my Security+ cert. Passed on the first try. Then... silence. Two months of job applications with zero callbacks.\n\nTurned out I was making a critical mistake: I had credentials but zero *demonstrated* experience.\n\nHere's what actually worked:\n\n1. I built a home lab. Nothing fancy\u2014just a Hyper-V setup running vulnerable Windows VMs and Linux boxes. I documented everything on GitHub.\n\n2. I started writing technical posts about what I learned. Not polished articles\u2014raw, honest breakdowns of vulnerabilities I found while practicing.\n\n3. I contributed to open-source security projects. Small fixes at first, but recruiters could *see* my code.\n\nWithin 4 weeks of doing these three things, I had three legitimate job offers.\n\nThe certification opened the door. But the work\u2014the *visible* work\u2014is what got me hired.\n\nIf you're breaking into cybersecurity right now, don't just study for tests. Build something. Show something. Write about something.\n\nRecruiters want to see evidence, not just a certificate.\n\nWhat's one thing you've built or documented in your security journey that actually moved the needle for you?",
+  "hashtags": [
+    "#CyberSecurity",
+    "#CybersecurityCareers",
+    "#SecurityPlus",
+    "#EntryLevelJobs",
+    "#HomeLab"
+  ],
+  "image_prompt": "Modern infographic-style image showing a progression path: left side shows a certificate icon with a checkmark (representing certification), middle shows a folder/GitHub icon with code symbols (demonstrating work), right side shows a handshake icon with an upward arrow (job offer). Use cybersecurity colors\u2014deep blue, neon green, dark gray background. Clean, minimalist design. 16:9 ratio. No text overlay.",
+  "post_type": "career_tip",
+  "date": "2026-05-08"
+}
