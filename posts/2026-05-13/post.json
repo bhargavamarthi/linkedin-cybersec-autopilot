@@ -1,0 +1,14 @@
+{
+  "topic": "MITRE ATT&CK Framework: Why most security teams still don't use it correctly",
+  "post_text": "Most security teams treat MITRE ATT&CK like a reference library.\n\nThey're missing the point entirely.\n\nHere's the real value: MITRE ATT&CK is a shared language for how attackers actually behave\u2014not how we *think* they behave.\n\nThink of it like airport security. For decades, TSA screened for what they guessed terrorists *might* do. Then they started studying what terrorists *actually* did across hundreds of incidents. They mapped the patterns. Suddenly, screening became smarter, faster, and harder to bypass.\n\nThat's MITRE ATT&CK.\n\nInstead of building defenses around theoretical threats, you:\n\n\u2192 Map your adversaries to their actual tactics and techniques (Reconnaissance, Execution, Persistence, etc.)\n\u2192 Identify gaps in your detection and response capabilities against *real* attack patterns\n\u2192 Prioritize your security investments based on what matters\u2014not what sounds scary\n\u2192 Communicate threats to executives in a language they understand\n\nThe teams winning in 2026 aren't the ones with the biggest budgets. They're the ones using MITRE ATT&CK to hunt like their adversaries think\u2014and defending against the techniques that *actually* work.\n\nYour SOC should have a MITRE navigator window open. Your threat hunts should start there. Your incident response playbooks should map to it.\n\nIf you're still treating it as optional reading, you're playing checkers while attackers play chess.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#MITRE",
+    "#ThreatIntelligence",
+    "#SOC",
+    "#SecurityStrategy"
+  ],
+  "image_prompt": "Professional infographic showing MITRE ATT&CK framework as a building blueprint or map. Left side shows an attacker figure following a path through different colored zones representing tactics (Reconnaissance in red, Execution in orange, Persistence in yellow, etc.). Right side shows a defender figure with shield and checklist, strategically positioned at each tactic layer. Use a modern color palette with deep blues, oranges, and greens. Include subtle grid or network background. 16:9 aspect ratio, clean corporate style, no text overlay.",
+  "post_type": "concept_explainer",
+  "date": "2026-05-13"
+}
