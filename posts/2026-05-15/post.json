@@ -1,0 +1,14 @@
+{
+  "topic": "The certification trap: why passing the exam doesn't mean you're ready for the job",
+  "post_text": "I passed my Security+ in March. Felt like I'd cracked the code to landing my first cybersecurity role.\n\nThen reality hit during interviews.\n\nRecruiter: \"Walk me through how you'd investigate a suspicious login from an unfamiliar IP.\"\n\nMe: *Blank stare. I'd memorized CIA triad definitions, not incident response workflows.*\n\nHere's what I learned the hard way: certifications open doors. Labs open careers.\n\nI was studying exam objectives instead of building muscle memory. No hands-on experience with SIEM tools, no exposure to real network traffic analysis, no failed investigations to learn from.\n\nSo I pivoted. Started running my own home lab\u2014set up Splunk Community Edition, created intentional security events, practiced threat hunting for real. Built a GitHub repo documenting my findings. Took free courses on platforms like TryHackMe and HackTheBox, but this time with a focus on *application* over memorization.\n\nFour months later, I landed a junior analyst role. The hiring manager told me it wasn't the cert\u2014it was the lab work on my resume that made the difference.\n\nCertifications are your ticket to the interview room. Experience is what keeps you in the seat.\n\nIf you're breaking into cybersecurity, don't skip the cert\u2014but don't stop there either. Build something. Investigate something. Break something (in a lab).\n\nWhat's holding you back from starting your first home lab? Cost? Technical knowledge? Time? I want to hear what's actually blocking you.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#SecurityPlus",
+    "#HomeLab",
+    "#CareerTip",
+    "#CyberSecurityJobs"
+  ],
+  "image_prompt": "Professional infographic-style image showing a split-screen comparison. Left side: person studying certification books with clock showing time passing, looking uncertain. Right side: same person at computer with network diagrams, logs, and analytics dashboards showing confidence and growth. Color scheme: deep blue and teal with accent orange. Modern, clean design. 16:9 aspect ratio. No text overlays.",
+  "post_type": "career_tip",
+  "date": "2026-05-15"
+}
