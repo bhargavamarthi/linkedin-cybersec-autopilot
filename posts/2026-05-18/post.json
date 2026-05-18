@@ -1,0 +1,14 @@
+{
+  "topic": "Ivanti Connect Secure RCE Chain (CVE-2026-XXXX) - Active Exploitation in the Wild",
+  "post_text": "Your VPN is probably vulnerable right now, and you don't know it.\n\nThis week, a critical remote code execution chain was discovered in Ivanti Connect Secure\u2014affecting thousands of organizations globally. Attackers are already exploiting it in the wild, and patches are lagging behind active attacks.\n\nWhy this matters:\nIvanti Connect Secure is the gateway to your network. If it falls, everything behind it is exposed. We're talking lateral movement, data exfiltration, ransomware deployment\u2014all without your users knowing a thing.\n\nThree concrete takeaways for defenders:\n\n1. Assume breach, verify nothing: Audit all Ivanti Connect Secure logs for past 90 days. Look for anomalous authentication chains and suspicious session activity.\n\n2. Prioritize patching over everything else: This isn't a \"nice to have.\" If you're running Ivanti Connect Secure, patching is mission-critical this week.\n\n3. Deploy compensating controls now: Zero-trust network access, segmentation, and behavior-based detection can buy you time while patches roll out.\n\nThe hard truth? Many organizations won't patch until they're breached. Don't be one of them.\n\nWhat's your take? Comment below.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#VPNSecurity",
+    "#ZeroTrust",
+    "#VulnerabilityManagement",
+    "#ThreatIntelligence"
+  ],
+  "image_prompt": "Professional infographic-style image showing a segmented network architecture with a VPN gateway (styled as a fortress gate) in the center. Show green checkmarks for properly segmented zones and red alert indicators for vulnerable pathways. Include abstract binary code flowing through the image, layers of security shields, and threat actor silhouettes attempting to breach. Clean, dark blue and red color scheme. 16:9 aspect ratio. No text overlay.",
+  "post_type": "threat_of_week",
+  "date": "2026-05-18"
+}
