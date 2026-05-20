@@ -1,0 +1,14 @@
+{
+  "topic": "MITRE ATT&CK Framework: Why It's Your Intelligence Compass, Not Your Checklist",
+  "post_text": "Most security teams treat MITRE ATT&CK like a shopping list to check off.\n\nThat's backwards.\n\nHere's the real value: Imagine you're a detective investigating a crime scene. The evidence tells a story\u2014broken window, missing jewelry, muddy footprints. You don't just catalog what happened. You map it against known criminal patterns to identify WHO did it and HOW.\n\nThat's MITRE ATT&CK.\n\nIt's a *library of adversary behaviors*, not a compliance requirement. When your SOC detects suspicious activity, ATT&CK helps you:\n\n\u2713 Understand the attacker's objective (not just the tactic)\n\u2713 Predict what comes next in their playbook\n\u2713 Compare your incident to thousands of real-world campaigns\n\u2713 Make smarter resource decisions about what to defend first\n\nThe framework has 14 tactics (reconnaissance, initial access, execution, etc.) and 700+ techniques\u2014but you don't need to defend against all of them equally.\n\nYour threat intel should drive your defensive strategy, not the other way around.\n\nIf adversaries targeting your industry favor data exfiltration via DNS tunneling, you hunt DNS anomalies. If they pivot through unpatched software, you patch ruthlessly.\n\nMITRE ATT&CK is the *translation layer* between intelligence and defense.\n\nUse it like a detective uses case files\u2014to see patterns, not to build walls everywhere.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#MITREATT&CK",
+    "#ThreatIntelligence",
+    "#SecurityStrategy",
+    "#BlueTeam"
+  ],
+  "image_prompt": "Infographic showing a detective's investigation board with red string connecting evidence photos to a pyramid structure labeled with MITRE ATT&CK tactics (Reconnaissance, Initial Access, Execution, Persistence, Privilege Escalation, Defense Evasion). Left side shows chaotic scattered evidence, right side shows organized tactical mapping with color-coded threat actors. 16:9 aspect ratio, dark professional background, clean sans-serif layout, no text overlays.",
+  "post_type": "concept_explainer",
+  "date": "2026-05-20"
+}
