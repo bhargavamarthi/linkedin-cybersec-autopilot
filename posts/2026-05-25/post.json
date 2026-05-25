@@ -1,0 +1,14 @@
+{
+  "topic": "Critical Ivanti Connect Secure zero-day chain enabling unauthenticated RCE affecting thousands of enterprises",
+  "post_text": "The vulnerability nobody saw coming just turned thousands of VPN appliances into open doors.\n\nLast week, Ivanti disclosed a critical zero-day chain in Connect Secure that allows unauthenticated remote code execution. We're talking about attackers bypassing authentication entirely and gaining full system control on edge devices that are supposed to be your perimeter defense.\n\nWhy this matters: VPN appliances are one of the last lines of defense between the internet and your internal network. If an attacker owns that box, they own your entire environment. The fact that this required zero authentication changes the threat calculus completely.\n\nWhat defenders need to do right now:\n\n1. PATCH IMMEDIATELY \u2013 Ivanti released firmware updates. If you can't patch today, isolate these appliances behind additional network segmentation. This isn't optional.\n\n2. HUNT FOR INDICATORS \u2013 Check your Ivanti logs for suspicious authentication attempts, unusual admin access, and web shell uploads. Assume compromise and investigate thoroughly.\n\n3. SEGMENT YOUR NETWORK \u2013 Your VPN shouldn't have direct line-of-sight to critical systems. Implement microsegmentation so even if the perimeter is breached, lateral movement is blocked.\n\nThis is a reminder that edge devices are just as critical as internal infrastructure. They're often forgotten in security reviews until it's too late.\n\nWhat's your take? Comment below.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#VulnerabilityManagement",
+    "#ZeroDay",
+    "#InfoSec",
+    "#ThreatIntel"
+  ],
+  "image_prompt": "Professional infographic showing a network architecture diagram with a VPN appliance at the center surrounded by concentric security rings, a red breach indicator on the perimeter device, and visual representation of attack paths bypassing traditional authentication barriers. Dark blue and red color scheme, clean modern design, no text overlays, 16:9 aspect ratio.",
+  "post_type": "threat_of_week",
+  "date": "2026-05-25"
+}
