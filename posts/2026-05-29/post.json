@@ -1,0 +1,14 @@
+{
+  "topic": "The certification that actually opened doors: Why Security+ alone isn't enough anymore",
+  "post_text": "I spent 6 months grinding for Security+ thinking it would be my golden ticket. Passed on the first try, felt amazing... then got rejected from 15 junior positions.\n\nTurns out, in 2026, certs alone don't move the needle. What changed everything? Building a real portfolio.\n\nI started small: set up a home lab, documented a vulnerability assessment on my own network, then created a detailed writeup. No fancy tools\u2014just VirtualBox, Wireshark, and time.\n\nThat one portfolio project landed me interviews. Recruiters told me later it proved I could actually *do* the work, not just pass a test.\n\nHere's what I learned: certifications open the door, but a portfolio gets you through it. Employers want to see your problem-solving process, your documentation skills, your ability to explain technical concepts clearly.\n\nIf you're breaking into security right now:\n1. Get your cert (Security+, CEH, whatever aligns with your goal)\n2. Immediately build something\u2014doesn't have to be complex\n3. Write about it like you're teaching someone else\n4. Share it, even if it's imperfect\n\nYour first job comes from proving you can think like a security professional, not just recite definitions.\n\nWhat's one real project or lab setup that actually helped your transition into cybersecurity?",
+  "hashtags": [
+    "#CyberSecurity",
+    "#CareerTransition",
+    "#Security+",
+    "#InfoSec",
+    "#CareerDevelopment"
+  ],
+  "image_prompt": "Professional infographic showing a progression path: left side shows a certification badge with a checkmark, middle shows a person at a computer in a home lab environment with monitors displaying security dashboards, right side shows a job offer letter. Use cool blues, teals, and tech-forward color palette. Include subtle network visualization in background. 16:9 aspect ratio, modern flat design style, no text overlays.",
+  "post_type": "career_tip",
+  "date": "2026-05-29"
+}
