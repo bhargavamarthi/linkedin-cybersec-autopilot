@@ -13,7 +13,10 @@ from pathlib import Path
 
 DATE = datetime.date.today().isoformat()
 POST_PATH = f"posts/{DATE}/post.json"
-IMAGE_PATH = f"posts/{DATE}/image.png"
+IMAGE_PATH = next(
+    (f"posts/{DATE}/{f}" for f in ("image.jpg", "image.png") if Path(f"posts/{DATE}/{f}").exists()),
+    f"posts/{DATE}/image.jpg",
+)
 
 LINKEDIN_API = "https://api.linkedin.com/v2"
 TOKEN = os.environ["LINKEDIN_ACCESS_TOKEN"]
@@ -60,9 +63,10 @@ def upload_image(image_path: str) -> str | None:
     with open(image_path, "rb") as f:
         image_bytes = f.read()
 
+    content_type = "image/jpeg" if image_path.endswith((".jpg", ".jpeg")) else "image/png"
     r = requests.put(
         upload_url,
-        headers={"Authorization": f"Bearer {TOKEN}", "Content-Type": "image/png"},
+        headers={"Authorization": f"Bearer {TOKEN}", "Content-Type": content_type},
         data=image_bytes,
     )
     r.raise_for_status()

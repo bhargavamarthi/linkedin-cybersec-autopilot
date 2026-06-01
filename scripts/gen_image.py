@@ -2,21 +2,22 @@
 gen_image.py
 ------------
 Reads the image_prompt from today's post.json
-Calls Gemini Imagen to generate the image
+Calls Pollinations.ai (free, no API key) to generate the image via FLUX
 Saves result to posts/YYYY-MM-DD/image.png
 Falls back gracefully to text-only if image generation fails.
 """
 
-import os
 import json
 import datetime
-import base64
-from google import genai
+import requests
+import urllib.parse
 from pathlib import Path
 
 DATE = datetime.date.today().isoformat()
 POST_PATH = f"posts/{DATE}/post.json"
-IMAGE_PATH = f"posts/{DATE}/image.png"
+IMAGE_PATH = f"posts/{DATE}/image.jpg"
+
+POLLINATIONS_URL = "https://image.pollinations.ai/prompt/{prompt}?width=1280&height=720&model=flux&nologo=true"
 
 FALLBACK_PROMPT = (
     "Professional cybersecurity infographic, dark blue and teal color palette, "
@@ -26,12 +27,6 @@ FALLBACK_PROMPT = (
 
 
 def generate_image():
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        print("[gen_image] No GEMINI_API_KEY set, skipping image generation")
-        return
-    client = genai.Client(api_key=api_key)
-
     if Path(POST_PATH).exists():
         with open(POST_PATH) as f:
             post_data = json.load(f)
@@ -41,16 +36,16 @@ def generate_image():
         prompt = FALLBACK_PROMPT
         print("[gen_image] post.json not found, using fallback prompt")
 
+    url = POLLINATIONS_URL.format(prompt=urllib.parse.quote(prompt))
+
     try:
-        response = client.models.generate_images(
-            model="imagen-3.0-generate-002",
-            prompt=prompt,
-            config=genai.types.GenerateImagesConfig(number_of_images=1),
-        )
-        image_bytes = response.generated_images[0].image.image_bytes
+        print("[gen_image] Requesting image from Pollinations.ai (FLUX)...")
+        r = requests.get(url, timeout=120)
+        r.raise_for_status()
+
         with open(IMAGE_PATH, "wb") as f:
-            f.write(image_bytes)
-        print(f"[gen_image] Saved → {IMAGE_PATH} ({len(image_bytes)//1024}KB)")
+            f.write(r.content)
+        print(f"[gen_image] Saved → {IMAGE_PATH} ({len(r.content)//1024}KB)")
     except Exception as e:
         print(f"[gen_image] WARNING: Image generation failed ({e})")
         print("[gen_image] Post will go text-only")

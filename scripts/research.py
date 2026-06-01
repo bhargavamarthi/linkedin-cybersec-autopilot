@@ -17,13 +17,15 @@ import anthropic
 TOPIC_ROTATION = {
     0: "threat_of_week",    # Monday
     2: "concept_explainer", # Wednesday
-    4: "career_tip",        # Friday
+    4: "industry_insight",  # Friday
 }
 
-SYSTEM_PROMPT = """You are a cybersecurity content strategist with 20+ years of experience.
-You create LinkedIn posts that attract recruiters and demonstrate deep technical knowledge.
-Your posts are authoritative, human, and always end with a clear call to action.
-You understand what goes viral on LinkedIn in the cybersecurity space in 2025."""
+SYSTEM_PROMPT = """You are a cybersecurity professional with 20+ years of experience writing authoritative LinkedIn content.
+Your posts are grounded in real, current, verifiable facts — named CVEs, named incidents, published research, actual statistics.
+You write in first person to explain, analyze, and opine on facts — never to share personal anecdotes, personal exam experiences, or invented stories.
+You never fabricate personal failures, certifications attempts, or career struggles on behalf of the author.
+Virality comes from the quality and relevance of the information, not from personal drama or confession-style hooks.
+Your posts attract security practitioners, hiring managers, and technical leaders."""
 
 
 def get_post_type():
@@ -37,25 +39,38 @@ def build_prompt(post_type: str) -> str:
     if post_type == "threat_of_week":
         task = (
             "Identify the single most talked-about cybersecurity threat, breach, CVE, "
-            "or ransomware incident from the past 7 days. Write a LinkedIn post that: "
-            "• Hooks with a shocking or counterintuitive opening line "
+            "or ransomware incident from the past 7 days. Use real, named incidents and "
+            "published CVE numbers where possible. Write a LinkedIn post that: "
+            "• Opens with a sharp, factual hook (a specific number, a named victim, or a "
+            "  counterintuitive finding — never a fabricated personal story) "
             "• Explains what happened and why it matters in plain English "
-            "• Names 2-3 concrete takeaways for defenders "
+            "• Names 2-3 concrete, actionable takeaways for defenders "
             "• Ends with 'What's your take? Comment below.' "
+            "Do not invent personal anecdotes. Ground every claim in real events."
         )
-    elif post_type == "career_tip":
+    elif post_type == "industry_insight":
         task = (
-            "Write a LinkedIn post from the perspective of someone actively breaking "
-            "into cybersecurity. Share one authentic career insight, study tip, or "
-            "certification lesson. Make it personal, relatable, and useful. "
-            "End with a question that invites other job-seekers to reply. "
+            "Pick one significant, contemporary trend, regulatory development, or strategic "
+            "shift in cybersecurity (e.g. NIS2 enforcement, AI-assisted attacks, CISA KEV "
+            "updates, zero-day commoditization, SEC disclosure rules, supply chain security). "
+            "Write a LinkedIn post that: "
+            "• Opens with a sharp fact, statistic, or named development that frames why this matters now "
+            "• Analyzes the real-world implication for organizations or practitioners "
+            "• Offers a pointed, expert perspective in first person (opinion and analysis — not personal story) "
+            "• Ends with a question that invites practitioners to weigh in "
+            "Do not invent personal experiences, exam results, or career anecdotes. "
+            "The hook must come from the substance of the issue, not from personal drama."
         )
     else:
         task = (
             "Pick one foundational or emerging cybersecurity concept that is widely "
             "misunderstood or underappreciated (e.g. Zero Trust, SIEM, EDR, threat hunting, "
-            "MITRE ATT&CK, cloud misconfigs). Write a LinkedIn post that explains it "
-            "clearly using a real-world analogy. End with '♻️ Repost if this helped someone.' "
+            "MITRE ATT&CK, cloud misconfigs, memory-safe languages, SBOM). Write a LinkedIn "
+            "post that explains it clearly using a concrete real-world analogy or a named "
+            "real incident that illustrates the concept. Use first-person voice to guide the "
+            "reader through the explanation — not to share personal stories. "
+            "End with '♻️ Repost if this helped someone.' "
+            "Do not fabricate personal anecdotes or certification experiences."
         )
 
     return f"""Today is {today}. Post type: {post_type}
