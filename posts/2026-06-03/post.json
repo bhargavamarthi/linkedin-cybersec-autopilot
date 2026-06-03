@@ -1,0 +1,14 @@
+{
+  "topic": "Why SBOM (Software Bill of Materials) is the foundation of modern supply chain security, not just compliance theater",
+  "post_text": "I've watched security teams spend months on vulnerability scanning, only to realize they don't know what third-party libraries are actually in their production binaries. That's the SBOM problem.\n\nThink of an SBOM like a pharmaceutical drug's ingredient label. If a manufacturer doesn't know every compound in their medication, they can't respond when the FDA identifies a contaminated supplier. They can't track which batches are affected. They're flying blind.\n\nThe same applies to software. When SolarWinds' Orion platform was compromised in 2020, thousands of organizations couldn't quickly answer: \"Do we run this software? Which versions? What did the attackers access through it?\" The attack persisted for months partly because visibility was fragmented.\n\nAn SBOM answers those questions at scale:\n\n\u2022 Which exact dependencies\u2014open source, proprietary, third-party\u2014are in your application\n\u2022 Which versions (critical, since Log4j 2.14.1 was vulnerable but 2.15.0 wasn't)\n\u2022 Where those components came from and their maintenance status\n\u2022 Real-time correlation with published CVEs\n\nI'm seeing three common misconceptions:\n\n1. \"SBOMs are only for government contractors.\" False. Every organization handling sensitive data now needs visibility into component risk. This is industry baseline now.\n\n2. \"An SBOM is just a list.\" Incomplete. A useful SBOM includes license tracking, known vulnerabilities, and maintainer health\u2014not just names and versions.\n\n3. \"We can skip SBOM if we scan dependencies regularly.\" Wrong. Scanning tells you what's broken. An SBOM tells you what you own, enabling automated response across thousands of systems simultaneously.\n\nCritical: generating an SBOM isn't remediation. It's the foundation that makes remediation possible. You can't fix what you don't see.\n\nExpect mandatory SBOM requirements to expand beyond federal procurement into financial services, healthcare, and critical infrastructure over the next 24 months. Starting now means you're already ahead.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#SupplyChainSecurity",
+    "#SBOM",
+    "#VulnerabilityManagement",
+    "#SecurityEngineering"
+  ],
+  "image_prompt": "Professional infographic showing a transparent software application container with multiple visible components (gears, modules, libraries) stacked inside, each labeled with version numbers and status indicators (green checkmark, red warning). Outside the container, a scanning lens or magnifying glass reveals the internal structure. Background: clean tech aesthetic with subtle grid pattern. 16:9 aspect ratio, no text overlays.",
+  "post_type": "concept_explainer",
+  "date": "2026-06-03"
+}
