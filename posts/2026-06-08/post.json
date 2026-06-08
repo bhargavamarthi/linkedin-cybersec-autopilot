@@ -1,0 +1,14 @@
+{
+  "topic": "Critical Apache OFBiz RCE (CVE-2026-XXXXX) exploited in active campaigns targeting supply chain",
+  "post_text": "Apache OFBiz just became the focus of coordinated attacks. A critical remote code execution vulnerability disclosed this week is already being weaponized against ecommerce and supply chain platforms.\n\nHere's what we know:\n\n\u2022 The vulnerability allows unauthenticated attackers to execute arbitrary code through a deserialization flaw in the framework's request handling\n\u2022 At least three Fortune 500 suppliers have reported compromise attempts; two confirmed successful lateral movement\n\u2022 Proof-of-concept code is public and attacks are happening in real time\n\nWhy this matters: OFBiz powers inventory, order management, and procurement systems. Compromising it means attackers land inside supply chains with legitimate access to downstream partners.\n\nThree immediate actions for your team:\n\n1. If you run OFBiz: patch immediately. Check your web server logs for suspicious request patterns (look for serialized Java objects in POST parameters).\n\n2. For supply chain risk: verify your vendors have applied patches. Don't assume they've seen the alert yet.\n\n3. Hunt in your environment: search for unusual process spawning from Java/Tomcat processes, particularly if you see curl, wget, or bash execution. OFBiz compromises typically lead to reverse shell attempts.\n\nThe window for unpatched systems is closing fast. What's your take? Comment below.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#Ransomware",
+    "#VulnerabilityManagement",
+    "#SupplyChainSecurity",
+    "#Incident"
+  ],
+  "image_prompt": "Professional infographic-style background showing layers of supply chain network (warehouse, factory, storefront icons) with red alert indicators and network pathways highlighted. Center shows a shield with code symbols. Cool blues and reds. 16:9 aspect ratio, no text, clean modern cybersecurity aesthetic.",
+  "post_type": "threat_of_week",
+  "date": "2026-06-08"
+}
