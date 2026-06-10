@@ -1,0 +1,14 @@
+{
+  "topic": "Why Software Bill of Materials (SBOM) is non-negotiable for supply chain security",
+  "post_text": "I see organizations treating SBOM like a checkbox compliance item. That's backwards.\n\nLet me explain why with a concrete example: When Apache Log4j (CVE-2021-44228) dropped, thousands of teams couldn't answer a basic question: \"Do we use this library?\" Not because they didn't care\u2014because they had no inventory of their software dependencies.\n\nThink of SBOM like a restaurant health inspection ledger. An inspector doesn't just approve the kitchen; they need a complete list of every ingredient supplier, every batch number, every processing step. If a supplier's batch is contaminated, the inspector can trace it instantly. Without that ledger, you're blind.\n\nHere's what an SBOM actually does:\n\n1. **Identifies all components** \u2013 Every library, framework, open-source package in your build, with exact versions. No guessing.\n\n2. **Enables rapid response** \u2013 When a CVE lands, you query your SBOM in minutes, not weeks. Equifax waited too long to patch Struts (CVE-2017-5645); an SBOM would have compressed that timeline drastically.\n\n3. **Catches transitive dependencies** \u2013 Your app uses Framework X, which uses Library Y, which uses the vulnerable component. Most teams miss those buried layers without an SBOM.\n\n4. **Meets procurement reality** \u2013 Enterprise buyers now demand SBOMs from vendors. NTIA minimum elements are becoming table stakes.\n\nThe misconception: \"We don't have time for SBOM generation.\"\n\nThe reality: Modern build tools (Maven, npm, pip, Cargo) can auto-generate SBOMs in CycloneDX or SPDX format as part of your CI/CD pipeline. It's not manual overhead\u2014it's automated visibility.\n\nIf you can't tell a customer, regulator, or incident responder what's in your software within 24 hours, you're operating blind in 2026.\n\nStart with one application. Generate an SBOM. Integrate it into your build process. Then scale.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#SupplyChainSecurity",
+    "#SBOM",
+    "#SoftwareSecurity",
+    "#DevSecOps"
+  ],
+  "image_prompt": "Professional infographic showing a layered software stack diagram (left side) with invisible components highlighted in red, transitioning to a right side showing the same stack with complete transparency and labeled components in green. Include visual elements of interconnected boxes and dependency chains. Modern, clean design. 16:9 aspect ratio. No text overlays.",
+  "post_type": "concept_explainer",
+  "date": "2026-06-10"
+}
