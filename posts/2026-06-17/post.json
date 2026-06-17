@@ -1,0 +1,14 @@
+{
+  "topic": "Why Software Bill of Materials (SBOM) is critical supply chain defense, not just compliance theater",
+  "post_text": "Most security teams treat SBOM as a checkbox\u2014a document to generate and file away. That misses the entire point.\n\nI'm talking about what an SBOM actually does: it gives you visibility into every component, dependency, and transitive library bundled into your software. When a vulnerability drops, you can answer \"Do we use this?\" in minutes instead of days.\n\nThe 2024 MOVEit Transfer RCE (CVE-2024-34498) showed exactly why. Progress Software patched a critical SQL injection in their file transfer product, but organizations couldn't quickly determine if they were exposed because they had no inventory of their own third-party dependencies\u2014let alone what MOVEit itself contained.\n\nNow consider the opposite: organizations running mature SBOM practices (cycloneDX or SPDX format) could:\n\u2022 Run their SBOM through a vulnerability scanner in real-time\n\u2022 Identify affected versions within hours\n\u2022 Prioritize patching based on actual exposure\n\nHere's what's widely missed: SBOM isn't primarily about preventing breaches. It's about reducing mean time to detection and response when supply chain vulnerabilities surface. That difference is measured in millions of dollars of dwell time.\n\nThe U.S. Executive Order 14028 and the NIST SSDF framework mandated SBOMs for good reason\u2014they're the foundation of rational risk decision-making in modern software supply chains.\n\nIf you're not generating SBOMs, you're running blind on your own attack surface.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#SupplyChain",
+    "#SBOM",
+    "#VulnerabilityManagement",
+    "#SoftwareSecurity"
+  ],
+  "image_prompt": "Infographic showing a nested Russian doll concept: outer layer labeled 'Application', with interior layers representing dependencies, transitive libraries, and open-source components. Each layer slightly transparent showing the complexity underneath. Right side shows a checklist icon with a vulnerability scanner pulse through the layers. Color palette: deep blue, silver, and accent red for critical items. Professional, clean design, 16:9 aspect ratio.",
+  "post_type": "concept_explainer",
+  "date": "2026-06-17"
+}
