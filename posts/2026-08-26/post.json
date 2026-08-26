@@ -1,0 +1,14 @@
+{
+  "topic": "Software Bill of Materials (SBOM) as a foundational supply chain visibility tool",
+  "post_text": "I see SBOM treated as a compliance checkbox. That's the wrong lens.\n\nThink of it this way: when you buy a car, you don't just check that it works. You want to know which supplier made the engine, which factory built the transmission, and which vendor provided the electronics. Why? Because if one of those suppliers issues a recall \u2014 or worse, ships a defective part \u2014 you need to know instantly whether your car is affected.\n\nSoftware is the same. You cannot patch a vulnerability in a dependency you don't know you're using.\n\nThe 2021 Kaseya VSA supply chain attack proved this. Attackers compromised a single vendor's software, and through that one compromise, they accessed thousands of organizations downstream. Kaseya's customers couldn't answer the basic question: \"Which of our systems are running this software, and are they patched?\" Because they had no visibility into what was actually in their software.\n\nThat's where SBOM comes in. It's a machine-readable inventory of every component, library, and dependency in your software. When a CVE drops \u2014 like CVE-2024-3094 in xz-utils \u2014 you run your SBOM against it and instantly know which systems are vulnerable.\n\nThe real value? It shifts vulnerability management from reactive (\"we got compromised\") to proactive (\"we found the exposure before it was weaponized\").\n\nIf you're building, shipping, or consuming software, demand SBOMs. Require them from your vendors. Generate them for everything you build. It's not bureaucracy \u2014 it's survival.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#SBOM",
+    "#SupplyChainSecurity",
+    "#VulnerabilityManagement",
+    "#SoftwareSecurity"
+  ],
+  "image_prompt": "Professional infographic showing concentric circles or a supply chain map visualization. Left side shows software components (libraries, dependencies, packages) flowing into a central box labeled SBOM. Right side shows vulnerability scanning tools cross-referencing that inventory. Color palette: deep blue, charcoal, and accent orange. No text overlays. 16:9 aspect ratio. Clean, corporate, technical aesthetic.",
+  "post_type": "concept_explainer",
+  "date": "2026-08-26"
+}
