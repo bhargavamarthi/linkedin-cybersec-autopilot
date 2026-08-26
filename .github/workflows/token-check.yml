@@ -1,0 +1,53 @@
+name: LinkedIn Token Health Check
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # Every Monday at 8am UTC (1 hour before the post runs)
+  workflow_dispatch:
+
+jobs:
+  check-token:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - name: Ping LinkedIn userinfo endpoint
+        id: ping
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${{ secrets.LINKEDIN_ACCESS_TOKEN }}" \
+            https://api.linkedin.com/v2/userinfo)
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          echo "HTTP status: $STATUS"
+
+      - name: Create issue if token is invalid
+        if: steps.ping.outputs.status != '200'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const status = '${{ steps.ping.outputs.status }}';
+            const run_url = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `⚠️ LinkedIn token invalid or expired – ${new Date().toISOString().slice(0,10)}`,
+              body: [
+                '### LinkedIn Token Health Check — token needs refresh',
+                '',
+                `**HTTP status returned:** \`${status}\` (expected \`200\`)`,
+                `**Checked:** ${new Date().toISOString().slice(0,10)}`,
+                `**Run:** [View logs](${run_url})`,
+                '',
+                '### How to fix',
+                '1. Go to https://www.linkedin.com/developers/apps and open your app',
+                '2. **Auth** tab → **OAuth 2.0 tools** → **OAuth token tools**',
+                '3. Select scopes: `openid`, `profile`, `w_member_social`',
+                '4. Click **Request access token** and copy the new token',
+                '5. Update the secret: `gh secret set LINKEDIN_ACCESS_TOKEN`',
+                '6. Update your local `.env` file with the new token',
+                '',
+                '> LinkedIn tokens expire every 60 days.',
+              ].join('\n'),
+              labels: ['bug', 'autopilot'],
+            });
