@@ -1,0 +1,14 @@
+{
+  "topic": "Why Software Bill of Materials (SBOM) matters: the Log4Shell lesson",
+  "post_text": "Most organizations still don't know what's actually running in their code. That's the core problem an SBOM solves \u2014 and Log4Shell proved why it matters.\n\nWhen Log4j 2 (CVE-2021-44228) was disclosed in December 2021, thousands of teams couldn't answer a simple question: \"Do we use Log4j? Where?\"\n\nWithout visibility into dependencies and transitive imports, vulnerability response became chaos. Some teams spent weeks scanning applications, rebuilding containers, and patching blindly. Others never found all affected instances.\n\nThink of it this way: imagine owning a building and not knowing which walls contain asbestos. When a health inspector flags asbestos as dangerous, you can't respond effectively. You need a blueprint.\n\nAn SBOM is that blueprint for software. It documents:\n- Every direct dependency your app uses\n- Every transitive dependency (libraries your libraries depend on)\n- Versions, licenses, and vulnerability metadata\n\nLog4Shell exposed this gap at scale. CISA later mandated SBOMs in federal contractor software. Industry adoption is accelerating, but many teams still treat it as compliance theater rather than operational necessity.\n\nThe value isn't theoretical. When the next critical RCE drops, your incident response time depends on whether you can answer \"Where is this vulnerable component?\" in minutes, not weeks.\n\nIf you're still deploying without SBOM visibility, you're operating blind.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#SBOM",
+    "#VulnerabilityManagement",
+    "#Log4Shell",
+    "#SupplyChainSecurity"
+  ],
+  "image_prompt": "Professional infographic showing a software supply chain: left side shows a tangled web of dependencies and libraries in shadow (representing unknown/unmapped code), right side shows the same dependencies organized in a clear hierarchical structure with version numbers and component relationships visible. Center shows a clock or timeline indicating response speed. Color scheme: dark blue background with bright accent colors (red for vulnerabilities, green for visibility). 16:9 aspect ratio, clean and corporate style, no text labels.",
+  "post_type": "concept_explainer",
+  "date": "2026-09-02"
+}
