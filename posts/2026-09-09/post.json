@@ -1,0 +1,14 @@
+{
+  "topic": "Why Software Bill of Materials (SBOM) is foundational, not optional\u2014lessons from the 2024 XZ Utils backdoor",
+  "post_text": "Here's what most organizations still don't grasp about Software Bill of Materials (SBOM): it's not inventory management. It's forensic archaeology.\n\nWhen the XZ Utils backdoor was discovered in February 2024, organizations that maintained an accurate SBOM could answer in hours: \"Do we use this library? In what versions? Which systems depend on it?\" Organizations without one spent weeks in manual discovery.\n\nThink of it this way. If a component in your supply chain is poisoned, an SBOM is your diagnostic toolkit. Without it, you're performing an autopsy in the dark.\n\nSBOM isn't about compliance checkboxes. It's about speed and precision when incident response matters most.\n\nHere's the hard reality: you cannot manage what you don't see. You cannot patch what you don't know you're running. The XZ incident proved that a single line of malicious code in a widely-used compression library can compromise SSH access across thousands of systems\u2014but only if you can't quickly trace the blast radius.\n\nWhat SBOM actually delivers:\n- Immediate artifact chain mapping during incidents\n- Vulnerability correlation without guesswork\n- Dependency risk visibility across the software stack\n\nI've watched incident response teams paralyze themselves for days trying to determine scope. SBOM eliminates that friction.\n\nIf you're not generating and maintaining an SBOM for your applications, you're not ready for the next supply chain incident. You're hoping you won't be hit.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#SBOM",
+    "#SupplyChainSecurity",
+    "#IncidentResponse",
+    "#DevSecOps"
+  ],
+  "image_prompt": "Professional infographic-style image (16:9) showing a transparent glass or crystalline cube containing interconnected nodes and dependency lines in blue and red, with some nodes highlighted in orange to indicate vulnerable components. The background shows a subtle dark grid pattern representing a network. No text overlays. Modern, clean aesthetic with cybersecurity theme.",
+  "post_type": "concept_explainer",
+  "date": "2026-09-09"
+}
