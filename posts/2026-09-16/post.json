@@ -1,0 +1,14 @@
+{
+  "topic": "Why SBOM (Software Bill of Materials) matters: lessons from the MOVEit Transfer RCE chain",
+  "post_text": "Here's what most organizations still get wrong about SBOM.\n\nWhen Progress Software disclosed CVE-2023-34362 (MOVEit Transfer RCE), the initial response across most enterprises was predictable: patch the application. But that wasn't the hard part. The hard part was answering: \"Do we even use MOVEit? Where? In what version?\"\n\nWithout an accurate, maintained Software Bill of Materials, teams couldn't answer that question quickly. Some discovered MOVEit was embedded in third-party tools they'd forgotten they owned. Others found it running on systems they thought were decommissioned.\n\nAn SBOM is your supply chain inventory\u2014not just a list of frameworks and libraries, but versions, dependencies, and where each component actually runs. Think of it like knowing every ingredient in your restaurant's supply chain: not just \"we use tomatoes,\" but which farm, which harvest, which batch, and every dish that contains it.\n\nThe value isn't in the SBOM document itself. It's in what you can do with it:\n\n\u2022 Rapid blast radius assessment when a CVE drops\n\u2022 Identifying transitive dependencies (a library you don't directly use, but your vendor does)\n\u2022 Detecting supply chain compromise earlier\n\u2022 Automating vulnerability correlation across your estate\n\nPost-MOVEit, enterprises that maintained SBOMs answered \"Are we affected?\" in hours. Others took weeks.\n\nIf you can't inventory your software, you can't secure it.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#SBOM",
+    "#VulnerabilityManagement",
+    "#SupplyChainSecurity",
+    "#MOVEit"
+  ],
+  "image_prompt": "Infographic showing a layered supply chain visualization: top layer shows a software application box, middle layer reveals interconnected component nodes (libraries, dependencies, frameworks) with version numbers, bottom layer shows a cascading risk visualization with CVE indicators. Use cool blues and oranges. 16:9 aspect ratio. No text overlays. Professional, technical aesthetic.",
+  "post_type": "concept_explainer",
+  "date": "2026-09-16"
+}
