@@ -1,0 +1,14 @@
+{
+  "topic": "Critical RCE in Apache OFBiz (CVE-2026-41915) exploited in active campaign",
+  "post_text": "Apache OFBiz just became the target of large-scale exploitation. CVE-2026-41915, a critical remote code execution flaw in the open-source ERP framework, is being actively leveraged in the wild\u2014with confirmed attacks against logistics and manufacturing firms in North America and Europe.\n\nHere's what you need to know:\n\nThe vulnerability exists in OFBiz's XML-RPC deserialization handler. An unauthenticated attacker can send a specially crafted request to gain full system access without credentials. CVSS 9.8. No user interaction required. The Apache Security Team released patches for versions 18.12.x and later on September 18th.\n\nWhy this matters: OFBiz powers supply chain and inventory systems for thousands of mid-market companies. Many run legacy versions; patching cycles for ERP software often lag 60+ days behind release. Threat actors are already scanning for unpatched instances.\n\nThree immediate actions for defenders:\n\n1. Audit all OFBiz instances in your environment\u2014versions, patch levels, internet exposure. If you're on 18.12.x through current, prioritize patching within 48 hours.\n\n2. Implement network segmentation. OFBiz should never be directly internet-facing. If it is, assume compromise and begin incident response.\n\n3. Monitor for suspicious XML-RPC traffic patterns and failed authentication spikes on port 8080 or your OFBiz service port.\n\nIf your organization uses OFBiz in production, this is not a watch-and-wait scenario. The exploit is trivial and actively deployed.\n\nWhat's your take? Comment below.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#Vulnerability",
+    "#ERP",
+    "#ThreatIntel",
+    "#CVE"
+  ],
+  "image_prompt": "Professional infographic showing a supply chain network diagram with highlighted vulnerable node labeled OFBiz. Color scheme: red for critical, gray for infrastructure. Include a shield icon with an X and binary code flowing from it. Style: clean, corporate, modern. 16:9 aspect ratio. No text overlays.",
+  "post_type": "threat_of_week",
+  "date": "2026-09-21"
+}
