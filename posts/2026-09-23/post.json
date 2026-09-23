@@ -1,0 +1,14 @@
+{
+  "topic": "Memory-safe languages as a foundational defense against entire classes of exploits",
+  "post_text": "I keep seeing organizations patch buffer overflows and use-after-free vulnerabilities individually, as though each is a separate incident. They're not. They're symptoms of a deeper architectural choice.\n\nMemory safety isn't new\u2014languages like Rust, Go, and Java enforce it at compile time. But we've treated it as optional, then scrambled to fix the fallout.\n\nConsider Google's Project Zero findings: of 0-days exploited in the wild over the past decade, approximately 70% stem from memory corruption bugs. CVE-2023-44487 (HTTP/2 Rapid Reset), CVE-2024-3592 (Chrome), CVE-2024-6387 (OpenSSH)\u2014none would exist in memory-safe languages.\n\nHere's what I mean concretely: a buffer overflow isn't a bug you patch once. It's a class of vulnerability your entire system remains vulnerable to until the underlying code is rewritten in a memory-safe language. Each patch is defensive. Switching languages is preventive.\n\nThe NSA's 2024 recommendations on memory safety weren't casual. They recognized that memory corruption attacks require fewer zero-days, scale across versions, and persist in production for months.\n\nThis isn't about abandoning C and C++ overnight. It's about strategic decisions: new projects in Rust or Go, critical components in memory-safe languages, and treating legacy code as a managed liability, not an asset.\n\nMemory safety is foundational. We're still learning to act like it.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#MemorySafety",
+    "#Rust",
+    "#AppSecurity",
+    "#InfoSec"
+  ],
+  "image_prompt": "Infographic showing two parallel system architectures: left side shows traditional C/C++ stack with highlighted memory corruption vulnerabilities (buffer overflow, use-after-free, heap overflow icons) with red warning symbols cascading downward. Right side shows memory-safe language architecture (Rust/Go) with compiler-enforced memory checks blocking those same attack vectors at compile time. Clean, professional design with subtle blue and green tones, no text labels, 16:9 aspect ratio, cybersecurity-focused visual style.",
+  "post_type": "concept_explainer",
+  "date": "2026-09-23"
+}
