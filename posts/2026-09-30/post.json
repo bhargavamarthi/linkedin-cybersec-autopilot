@@ -1,0 +1,14 @@
+{
+  "topic": "Why SBOM (Software Bill of Materials) is the unsexy security essential your organization is still ignoring",
+  "post_text": "I've noticed a pattern: teams invest heavily in firewalls, EDR, and threat hunting\u2014but treat SBOM like a checkbox. That's backwards.\n\nLet me explain why with a concrete example. The SolarWinds Orion breach (December 2020) exploited a dependency in SolarWinds' software supply chain. Victims didn't know what components were in the products they deployed. Without visibility into those dependencies, defenders couldn't assess risk, didn't know what to patch first, and couldn't correlate indicators of compromise to specific supply chain vulnerabilities.\n\nAn SBOM is simple: a complete, machine-readable inventory of every component, library, and dependency in your software. It answers three questions attackers already know the answer to:\n1. What's actually in this code?\n2. What versions of those components are deployed?\n3. Which known vulnerabilities affect them?\n\nHere's the shift: Stop thinking of SBOM as a vendor deliverable. Think of it as your baseline for risk quantification. When CVE-2024-50379 drops (a real RCE in a widely-used library), you don't guess which systems are affected\u2014your SBOM tells you instantly.\n\nThe industry hasn't matured here yet. Most organizations still ask vendors for SBOMs and get PDFs. Real security programs are demanding machine-readable formats (CycloneDX, SPDX) and automation to track them across development and deployment.\n\nThis isn't new thinking\u2014it's supply chain visibility applied to software. And after SolarWinds, MOVEit, and dozens of other supply-chain incidents, it's non-negotiable.\n\nIf you're not consuming SBOMs from your vendors or generating them for your own code, you're flying blind.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#SupplyChainSecurity",
+    "#SBOM",
+    "#Vulnerability",
+    "#SoftwareSecurity"
+  ],
+  "image_prompt": "Professional infographic showing a hierarchical breakdown of software components: at the top, a large software package icon; below it, branching downward through multiple layers showing libraries, dependencies, and open-source components with version numbers and CVE indicators. Use a clean, dark background with blue and orange accent colors. Include subtle icons representing scanning, tracking, and risk assessment. 16:9 aspect ratio, no text overlays.",
+  "post_type": "concept_explainer",
+  "date": "2026-09-30"
+}
