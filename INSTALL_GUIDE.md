@@ -133,7 +133,6 @@ Claude Code will run `bash setup.sh` for you. Then fill in `.env`:
 
 ```
 ANTHROPIC_API_KEY=sk-ant-...      ← from console.anthropic.com
-GEMINI_API_KEY=AIza...            ← from aistudio.google.com/apikey (free)
 LINKEDIN_ACCESS_TOKEN=...         ← see GET_LINKEDIN_TOKEN.md
 LINKEDIN_PERSON_URN=urn:li:person:...
 ```
@@ -145,13 +144,12 @@ LINKEDIN_PERSON_URN=urn:li:person:...
 Ask Claude Code:
 
 ```
-run the full pipeline in test mode — research a topic, generate the image prompt,
+run the full pipeline in test mode — research a topic and write the post,
 but do NOT publish to LinkedIn yet. Show me the output.
 ```
 
 Claude Code will run:
 1. `python scripts/research.py` → creates `posts/YYYY-MM-DD/post.json`
-2. `python scripts/gen_image.py` → creates `posts/YYYY-MM-DD/image.png`
 
 Review `posts/YYYY-MM-DD/post.json` — if you like it, then:
 
@@ -166,7 +164,6 @@ now publish to LinkedIn
 1. Go to: `https://github.com/YOUR-USERNAME/linkedin-cybersec-autopilot/settings/secrets/actions`
 2. Click **New repository secret** for each:
    - `ANTHROPIC_API_KEY`
-   - `GEMINI_API_KEY`
    - `LINKEDIN_ACCESS_TOKEN`
    - `LINKEDIN_PERSON_URN`
 
@@ -205,7 +202,6 @@ To run it manually: Actions → "LinkedIn Cybersec Autopilot" → **Run workflow
 | Service | Free Tier | Usage |
 |---|---|---|
 | GitHub Actions | 2,000 min/month | ~36 min/month used |
-| Gemini Pro | 1,500 requests/day | 3 requests/week |
 | LinkedIn API | Free | Unlimited posts |
 | Anthropic API | Pay per token | ~$0.01–0.05 per post |
 
@@ -232,7 +228,3 @@ echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc && source ~/.bashrc
 **LinkedIn token expired**
 Tokens expire every 60 days. Re-follow Step 3 in `GET_LINKEDIN_TOKEN.md`
 and update the `LINKEDIN_ACCESS_TOKEN` secret in GitHub.
-
-**Gemini image not generating**
-Check you're using `GEMINI_API_KEY` from **AI Studio** (aistudio.google.com),
-not Google Cloud Console — they are different keys.

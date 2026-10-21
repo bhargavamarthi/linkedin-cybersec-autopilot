@@ -35,7 +35,7 @@ echo "  ✅ System packages ready"
 # ── Python venv ───────────────────────────────────────────
 [ ! -d "venv" ] && python3 -m venv venv && echo "  ✅ venv created"
 source venv/bin/activate
-pip install anthropic google-generativeai requests python-dotenv --quiet
+pip install anthropic requests python-dotenv --quiet
 echo "  ✅ Python packages installed"
 
 # ── Auto-activate venv on future sessions ─────────────────
@@ -51,7 +51,6 @@ grep -qF "$ACTIVATE_LINE" ~/.bashrc 2>/dev/null || {
 if [ ! -f .env ]; then
   cat > .env << 'EOF'
 ANTHROPIC_API_KEY=sk-ant-REPLACE_ME
-GEMINI_API_KEY=AIza-REPLACE_ME
 LINKEDIN_ACCESS_TOKEN=REPLACE_ME
 LINKEDIN_PERSON_URN=urn:li:person:REPLACE_ME
 EOF
@@ -65,18 +64,17 @@ fi
 .env
 venv/
 __pycache__/
-posts/*/image.png
 EOF
 
 mkdir -p posts
-for s in scripts/research.py scripts/gen_image.py scripts/publish.py; do
+for s in scripts/research.py scripts/publish.py; do
   [ -f "$s" ] && echo "  ✅ $s" || echo "  ❌ MISSING: $s"
 done
 
 echo ""
 echo "═══════════════════════════════════════════════════"
 echo "  Next steps:"
-echo "  1. nano .env   (fill in your 4 API keys)"
+echo "  1. nano .env   (fill in your 3 API keys)"
 echo "  2. set -a && source .env && set +a"
 echo "  3. python scripts/research.py"
 echo "  4. cat posts/\$(date +%Y-%m-%d)/post.json"

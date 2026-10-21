@@ -37,7 +37,6 @@ Save this as `LINKEDIN_PERSON_URN`.
 1. Go to your GitHub repo → **Settings** → **Secrets and variables** → **Actions**
 2. Click **New repository secret** for each:
    - `ANTHROPIC_API_KEY`
-   - `GEMINI_API_KEY`
    - `LINKEDIN_ACCESS_TOKEN`
    - `LINKEDIN_PERSON_URN`
 

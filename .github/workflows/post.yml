@@ -22,17 +22,12 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install anthropic google-genai requests python-dotenv
+        run: pip install anthropic requests python-dotenv
 
       - name: Research topic + write post
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/research.py
-
-      - name: Generate image with Gemini
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python scripts/gen_image.py
 
       - name: Publish to LinkedIn
         env:
