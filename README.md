@@ -1,6 +1,6 @@
 # LinkedIn Cybersec Autopilot
 
-A fully automated content pipeline that researches, writes, illustrates, and publishes cybersecurity posts to LinkedIn — three times a week, with no human in the loop. It runs on a GitHub Actions cron schedule, uses Claude to write grounded, fact-based posts, generates a matching image for free, and posts directly to LinkedIn via its API. Every post is archived back into the repo for a full history.
+A fully automated content pipeline that researches, writes, and publishes text-only cybersecurity posts to LinkedIn — three times a week, with no human in the loop. It runs on a GitHub Actions cron schedule, uses Claude to write grounded, fact-based posts, and posts directly to LinkedIn via its API. Every post is archived back into the repo for a full history.
 
 Live since April 2026 — 34+ posts published and archived to date.
 
@@ -11,21 +11,18 @@ GitHub Actions (cron: Mon/Wed/Fri 9am UTC)
         │
         ▼
 scripts/research.py   → Claude (Anthropic API) picks a topic by day-of-week,
-                         writes a ~1200-char LinkedIn post + an image prompt
+                         writes a ~1200-char LinkedIn post
         │
         ▼
-scripts/gen_image.py  → Pollinations.ai (FLUX model, free, no API key) renders
-                         the accompanying image from that prompt
+scripts/publish.py    → Posts the text to LinkedIn via the UGC Posts API
         │
         ▼
-scripts/publish.py    → Posts text + image to LinkedIn via the UGC Posts API
-        │
-        ▼
-posts/YYYY-MM-DD/      → post.json, image.jpg, and receipt.json are committed
+posts/YYYY-MM-DD/      → post.json and receipt.json are committed
                          back to the repo as a permanent archive
 ```
 
-Each step is a separate script/workflow step, so a failure at any stage (e.g. image generation) degrades gracefully — `gen_image.py` falls back to a generic cybersecurity graphic, and if that fails too, `publish.py` just posts text-only.
+The pipeline is text-only — `scripts/gen_image.py` (Pollinations.ai/FLUX) is kept in the
+repo but is no longer called by the workflow.
 
 ## Content strategy
 
@@ -37,7 +34,7 @@ Topics rotate by day of week (`TOPIC_ROTATION` in `research.py`):
 | Wednesday | `concept_explainer` | A cybersecurity concept explained in plain English |
 | Friday | `industry_insight` | A regulatory shift or strategic trend (NIS2, AI-assisted attacks, CISA KEV, supply chain security, etc.) |
 
-The system prompt explicitly constrains Claude to write as a 20+ year practitioner analyzing **real, named, verifiable facts** (CVEs, incidents, published research, statistics) in first person — and to never fabricate personal anecdotes, certification struggles, or confession-style hooks. Each post ends with a question or CTA to drive engagement, and ships with curated hashtags and an image prompt tailored to the topic.
+The system prompt explicitly constrains Claude to write as a 20+ year practitioner analyzing **real, named, verifiable facts** (CVEs, incidents, published research, statistics) in first person — and to never fabricate personal anecdotes, certification struggles, or confession-style hooks. Each post ends with a question or CTA to drive engagement, and ships with curated hashtags.
 
 ## Repository structure
 
@@ -46,10 +43,10 @@ The system prompt explicitly constrains Claude to write as a 20+ year practition
   post.yml            Main pipeline — runs Mon/Wed/Fri 9am UTC, or on demand
   token-check.yml      Weekly LinkedIn token health check (Mondays 8am UTC)
 scripts/
-  research.py          Claude writes the post + image prompt → posts/YYYY-MM-DD/post.json
-  gen_image.py          Pollinations.ai (FLUX) generates the image → posts/YYYY-MM-DD/image.jpg
-  publish.py            Publishes to LinkedIn via the UGC Posts API
-posts/YYYY-MM-DD/       Archive of every generated post (text, image, publish receipt)
+  research.py          Claude writes the post → posts/YYYY-MM-DD/post.json
+  gen_image.py          Unused — kept for reference, not called by the workflow
+  publish.py            Publishes the text to LinkedIn via the UGC Posts API
+posts/YYYY-MM-DD/       Archive of every generated post (text, publish receipt)
 setup.sh                One-shot WSL2 setup script (system deps, venv, .env template)
 CLAUDE.md               Project instructions read automatically by Claude Code
 INSTALL_GUIDE.md        Full walkthrough: install Claude Code → configure → activate
@@ -59,7 +56,7 @@ GET_LINKEDIN_TOKEN.md   How to obtain a LinkedIn API token and person URN
 ## Automation & reliability
 
 - **Scheduled runs** — `post.yml` fires every Monday, Wednesday, and Friday at 9am UTC via cron, with `workflow_dispatch` for manual runs from the Actions tab.
-- **Self-archiving** — after every run, the bot commits the day's post, image, and receipt straight back into `posts/`, so the repo doubles as a content history.
+- **Self-archiving** — after every run, the bot commits the day's post and receipt straight back into `posts/`, so the repo doubles as a content history.
 - **Failure alerts** — if any pipeline step fails, a GitHub issue is opened automatically with a link to the failed run.
 - **Token health monitoring** — `token-check.yml` pings LinkedIn's `userinfo` endpoint every Monday morning (before the post job runs) and opens an issue with step-by-step refresh instructions if the access token has expired or gone invalid.
 
@@ -74,7 +71,7 @@ Full instructions live in `INSTALL_GUIDE.md` and `GET_LINKEDIN_TOKEN.md`; short 
    - `ANTHROPIC_API_KEY` — from console.anthropic.com
    - `LINKEDIN_ACCESS_TOKEN` — see `GET_LINKEDIN_TOKEN.md` (expires every 60 days)
    - `LINKEDIN_PERSON_URN` — from the LinkedIn `userinfo` endpoint
-5. **Test locally**: run `research.py` and `gen_image.py` to preview a post before publishing anything.
+5. **Test locally**: run `research.py` to preview a post before publishing anything.
 6. **Add the same secrets** to the repo under Settings → Secrets and variables → Actions.
 7. **Push** — the workflow activates and runs automatically on the Mon/Wed/Fri schedule (or trigger it manually from the Actions tab).
 
@@ -84,7 +81,6 @@ Full instructions live in `INSTALL_GUIDE.md` and `GET_LINKEDIN_TOKEN.md`; short 
 source venv/bin/activate
 set -a && source .env && set +a
 python scripts/research.py
-python scripts/gen_image.py
 python scripts/publish.py
 ```
 
@@ -95,7 +91,6 @@ python scripts/publish.py
 | Service | Free tier | Typical usage |
 |---|---|---|
 | GitHub Actions | 2,000 min/month | ~36 min/month |
-| Image generation (Pollinations.ai) | Free, no key | 3 requests/week |
 | LinkedIn API | Free | Unlimited posts |
 | Anthropic API | Pay per token | ~$0.01–0.05/post (~$0.50–2/month) |
 
@@ -109,7 +104,7 @@ From `posts/2026-09-18/post.json` (`industry_insight`, Friday rotation):
 >
 > How are you approaching supply chain control verification — third-party audit results, self-assessments, or a hybrid model?
 
-Each `post.json` also stores the topic, full hashtag set, the image prompt sent to FLUX, the post type, and the date — making every past post fully reproducible and auditable.
+Each `post.json` also stores the topic, full hashtag set, the post type, and the date — making every past post fully reproducible and auditable.
 
 ## Maintenance notes
 

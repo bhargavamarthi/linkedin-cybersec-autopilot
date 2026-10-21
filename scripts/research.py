@@ -4,7 +4,6 @@ research.py
 Calls Claude API to:
 1. Research the hottest cybersecurity topic of the week
 2. Write a LinkedIn post (~1200 chars) with hook + insight + CTA
-3. Produce an image prompt for Gemini image generation
 
 Saves output to posts/YYYY-MM-DD/post.json
 """
@@ -81,8 +80,7 @@ STRICT FORMAT — respond with valid JSON only, no markdown fences:
 {{
   "topic": "<one-line topic summary>",
   "post_text": "<full LinkedIn post, 900-1300 characters, use line breaks and emojis sparingly>",
-  "hashtags": ["#CyberSecurity", "<4 more relevant hashtags>"],
-  "image_prompt": "<detailed image prompt: professional, infographic-style, no text in image, 16:9, cybersecurity theme>"
+  "hashtags": ["#CyberSecurity", "<4 more relevant hashtags>"]
 }}"""
 
 
