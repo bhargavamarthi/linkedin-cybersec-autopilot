@@ -34,7 +34,9 @@ Topics rotate by day of week (`TOPIC_ROTATION` in `research.py`):
 | Wednesday | `concept_explainer` | A cybersecurity concept explained in plain English |
 | Friday | `industry_insight` | A regulatory shift or strategic trend (NIS2, AI-assisted attacks, CISA KEV, supply chain security, etc.) |
 
-The system prompt explicitly constrains Claude to write as a 20+ year practitioner analyzing **real, named, verifiable facts** (CVEs, incidents, published research, statistics) in first person — and to never fabricate personal anecdotes, certification struggles, or confession-style hooks. Each post ends with a question or CTA to drive engagement, and ships with curated hashtags.
+The system prompt constrains Claude to write in first person, analyzing **real, named, verifiable facts** (CVEs, incidents, published research, statistics) — and to never fabricate personal anecdotes, certification struggles, or confession-style hooks. It's additionally tuned for reach: every post opens with a sharp, specific hook (a hard number, a named CVE/incident, or a genuinely counterintuitive fact — never clickbait or exaggeration), uses short lines and → bullet takeaways for mobile skimming, and asks one pointed, topic-specific question to drive comments.
+
+Every post also closes with a short, varied, non-templated note that works in the author's real background — currently job-searching, remote-only, for SOC Analyst / VA-PT Analyst / Penetration Tester roles, 1 year of hands-on experience from an unpaid remote internship, CompTIA Security+ (Aug 2026) — and invites connections or referrals. Hashtags mix topic relevance with career-reach tags (e.g. `#OpenToWork`, `#CyberSecurityJobs`, `#SOCAnalyst`).
 
 ## Repository structure
 
