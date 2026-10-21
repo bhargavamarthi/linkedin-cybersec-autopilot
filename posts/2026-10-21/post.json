@@ -1,0 +1,14 @@
+{
+  "topic": "Why Software Bill of Materials (SBOM) matters: tracing the invisible supply chain",
+  "post_text": "Most security teams can tell you what's running on their servers. Almost none can tell you what's *inside* their dependencies.\n\nThis gap became impossible to ignore after the xz-utils backdoor (CVE-2024-3156) in early 2024. A malicious maintainer injected obfuscated code into a compression library used by SSH servers worldwide. The vulnerability sat dormant in releases for months\u2014not because the code was obviously malicious, but because no one had systematic visibility into what was actually inside the software they were running.\n\nThis is where Software Bill of Materials (SBOM) enters the conversation.\n\nThink of an SBOM like a restaurant's ingredient list. If a supplier ships you contaminated flour, you want to know instantly which bakers use it, which customers bought products containing it, and how to respond. Without that list, you're guessing.\n\nIn software: an SBOM is a machine-readable inventory of every component, library, and dependency in an application\u2014versions, licenses, known vulnerabilities, and provenance. NTIA's Minimum Elements standard (2021) formalized this. Tools like Cyclone DX and SPDX now generate SBOMs automatically during build pipelines.\n\nWhy this matters now:\n\n\u2192 Supply chain attacks are accelerating (Sunburst, SolarWinds FTRAXFMT, the MOVEit SQL injection chain)\n\u2192 Regulators are demanding it (CISA, BSA, EU CRA)\n\u2192 CI/CD tooling has made SBOM generation nearly frictionless\n\u2192 Vulnerability databases now cross-reference them\n\nI'm not saying an SBOM prevents backdoors. xz would still have slipped through many organizations. But with an SBOM, response time collapses from weeks to hours. You know exactly what needs patching. You know which customers to notify.\n\nIf you're not generating SBOMs in your build pipeline, that's a gap worth closing this quarter.\n\n\u267b\ufe0f Repost if this helped someone.",
+  "hashtags": [
+    "#CyberSecurity",
+    "#SupplyChainSecurity",
+    "#SBOM",
+    "#VulnerabilityManagement",
+    "#DevSecOps"
+  ],
+  "image_prompt": "Infographic showing a software supply chain as interconnected nodes and dependency chains. Left side shows a tangled web of libraries with question marks; right side shows the same structure with an SBOM acting as a transparent overlay, color-coded by risk level (green, yellow, red). Include subtle icons for scanning tools, package managers, and vulnerability feeds. Professional blue and gray palette, clean sans-serif typography. 16:9 aspect ratio, no text overlaid.",
+  "post_type": "concept_explainer",
+  "date": "2026-10-21"
+}
