@@ -1,0 +1,15 @@
+{
+  "topic": "Why Zero Trust isn't about 'never trust' \u2014 it's about continuous verification",
+  "post_text": "Zero Trust gets marketed as 'never trust anyone ever,' which is why most implementations fail.\n\nThe real principle: verify *every* access request, every time \u2014 regardless of whether the user is internal, the device looks clean, or they accessed the same resource yesterday.\n\nThis distinction matters because it shifts focus from perimeter defense (trust the castle walls) to identity and device posture verification (check every gate, every crossing).\n\nMicrosoft's 2019 breach showed why. An attacker compromised a single employee credential. In a traditional network, that opened the internal doors. Under Zero Trust architecture, that credential alone wouldn't grant access \u2014 the system would demand device compliance verification, multi-factor authentication, behavioral analysis, and context.\n\n\u2192 Zero Trust means: continuous, layered verification of identity, device, and behavior \u2014 not distrust\n\u2192 It's enforcement at the application/resource level, not just the network perimeter\n\u2192 Real adoption requires identity and access management tools, micro-segmentation, and monitoring \u2014 not just a VPN replacement\n\nThe gap between the concept and practice is massive. Organizations adopt the name, patch in MFA, call it Zero Trust, and move on. That's not Zero Trust \u2014 that's just doing the first step.\n\nWhen you audit your own organization's access controls, are you verifying *every* request, or just new ones?\n\nI'm actively looking for SOC Analyst and VA/PT roles \u2014 remote, full-time. I have 1 year of hands-on experience from a remote internship and hold CompTIA Security+. If you see an opening that fits or want to connect on infosec challenges like this, I'd value the conversation.",
+  "hashtags": [
+    "#ZeroTrust",
+    "#CyberSecurity",
+    "#IAM",
+    "#NetworkSecurity",
+    "#OpenToWork",
+    "#SOCAnalyst",
+    "#PenetrationTesting"
+  ],
+  "post_type": "concept_explainer",
+  "date": "2026-11-11"
+}
