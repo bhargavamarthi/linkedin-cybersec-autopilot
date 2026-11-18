@@ -1,0 +1,15 @@
+{
+  "topic": "Why Zero Trust isn't just a buzzword \u2014 and what it actually means for real incident response",
+  "post_text": "Microsoft's breach in 2023 exposed a hard truth: even with multi-billion-dollar security budgets, implicit trust kills you. A contractor's compromised credential gave attackers months inside their network because legacy segmentation assumed 'inside = safe.'\n\nZero Trust flips that assumption. It's not about being paranoid \u2014 it's about verifying every access request, every connection, every file movement, as if the network is already compromised.\n\nHere's what this actually means:\n\n\u2192 Every user, every device, every service must authenticate and authorize every single request \u2014 no exceptions for \"internal\" traffic\n\n\u2192 Microsegmentation isolates workloads so a breach in one app doesn't hand attackers the whole data center\n\n\u2192 Continuous verification through EDR, behavioral analytics, and device posture checks replaces the old \"once authenticated = trusted forever\" model\n\n\u2192 Lateral movement \u2014 the killer in most breaches \u2014 becomes exponentially harder when you can't just hop from one internal system to another\n\nThe Microsoft incident would have looked very different with true Zero Trust enforcement: that contractor's credential alone would not have unlocked six months of dwell time.\n\nMost organizations claim to do Zero Trust but actually just added a VPN or MFA on top of their old flat network. That's theater, not architecture.\n\nIf you're building or auditing a Zero Trust program, what's stopping you from actually implementing microsegmentation \u2014 cost, legacy systems, or lack of visibility into your east-west traffic?\n\nI'm actively searching for SOC Analyst, VA/PT, and Penetration Tester roles (remote, full-time). I bring 1 year of hands-on internship experience and CompTIA Security+ certification. If you're hiring or know a team that is, let's connect.",
+  "hashtags": [
+    "#ZeroTrust",
+    "#Cybersecurity",
+    "#IncidentResponse",
+    "#NetworkSecurity",
+    "#SOCAnalyst",
+    "#OpenToWork",
+    "#CyberSecurityJobs"
+  ],
+  "post_type": "concept_explainer",
+  "date": "2026-11-18"
+}
